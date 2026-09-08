@@ -260,6 +260,19 @@ contextwise sync
 
 ---
 
+## 📖 Developer Documentation & How-To Guides
+
+Explore full step-by-step implementation recipes and interactive guides at [contextwise.dev/docs](https://contextwise.dev/docs):
+
+1. **[Recipe 1: Slashing 90%+ Tokens in Heavy MCP Environments](https://contextwise.dev/docs#howto-token-slashing)**: Benchmarking 50+ Robinhood and Postgres MCP endpoints, dropping schema tokens from 18,300 to 680 tokens/turn.
+2. **[Recipe 2: Zero-Knowledge Secret Management (`vault://`)](https://contextwise.dev/docs#howto-vault-secrets)**: AES-256-GCM encrypted keystore with in-memory stream redaction to prevent secret leaks.
+3. **[Recipe 3: Multi-Device Cloud Sync (`push` / `pull`)](https://contextwise.dev/docs#howto-cloud-sync)**: Seamlessly sync MCP tools and encrypted credentials across laptops and cloud workstations.
+4. **[Recipe 4: Team Envelope Sharing & Key Distribution](https://contextwise.dev/docs#howto-team-envelopes)**: Asymmetric X25519 ECDH envelope distribution for team staging environments.
+5. **[Recipe 5: Enterprise Guardrails & Circuit Breakers](https://contextwise.dev/docs#howto-guardrails)**: Pre-flight Ajv validation, SHA-256 caching, and runaway loop prevention.
+6. **[Recipe 6: Dynamic Server Discovery & Autonomous In-Chat Installation](https://contextwise.dev/docs#howto-dynamic-servers)**: Keyboard TUI registry browser and autonomous LLM server hot-loading.
+
+---
+
 ## Architecture & Features
 
 ```
