@@ -19,11 +19,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ContextWise/contextwise.git"
+    "url": "https://github.com/brehnden-daly/contextwise.git"
   },
-  "homepage": "https://github.com/ContextWise/contextwise#readme",
+  "homepage": "https://github.com/brehnden-daly/contextwise#readme",
   "bugs": {
-    "url": "https://github.com/ContextWise/contextwise/issues"
+    "url": "https://github.com/brehnden-daly/contextwise/issues"
   },
   "scripts": {
     "build": "tsup",
