@@ -1,0 +1,36 @@
+{
+  "$schema": "https://contextwise.dev/schema/v1.json",
+  "version": "1.0.0",
+  "proxy": {
+    "transport": "stdio",
+    "port": 3456,
+    "logLevel": "info"
+  },
+  "routing": {
+    "strategy": "hybrid",
+    "topK": 5,
+    "similarityThreshold": 0.45,
+    "pinnedTools": [
+      "filesystem__read_file",
+      "git__git_status"
+    ]
+  },
+  "guardrails": {
+    "enableCache": true,
+    "cacheTtlSeconds": 120,
+    "maxCallsPerMinute": 60,
+    "loopBreakerThreshold": 3
+  },
+  "upstreams": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "./"],
+      "autoRestart": true
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "autoRestart": true
+    }
+  }
+}

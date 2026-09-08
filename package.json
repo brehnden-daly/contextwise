@@ -1,0 +1,71 @@
+{
+  "name": "contextwise",
+  "version": "0.1.0",
+  "description": "Dynamic Model Context Protocol (MCP) Tool Routing, Schema Compression & Execution Gateway",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "contextwise": "./bin/contextwise.js"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ContextWise/contextwise.git"
+  },
+  "homepage": "https://github.com/ContextWise/contextwise#readme",
+  "bugs": {
+    "url": "https://github.com/ContextWise/contextwise/issues"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsx watch src/cli/index.ts",
+    "start": "tsx src/cli/index.ts start",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "llm",
+    "ai",
+    "agent",
+    "proxy",
+    "routing",
+    "tools",
+    "token-optimization",
+    "claude-code",
+    "cursor",
+    "antigravity",
+    "developer-tools"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "dotenv": "^16.4.7",
+    "minisearch": "^7.1.1",
+    "ora": "^8.2.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
+  }
+}
