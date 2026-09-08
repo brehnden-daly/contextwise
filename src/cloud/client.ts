@@ -26,7 +26,10 @@ export class ContextWiseCloudClient {
       options.apiUrl ||
       process.env.CONTEXTWISE_API_URL ||
       'https://contextwise.dev';
-    this.storageDir = options.storageDir || join(homedir(), '.contextwise');
+    this.storageDir =
+      options.storageDir ||
+      process.env.CONTEXTWISE_STORAGE_DIR ||
+      join(homedir(), '.contextwise');
     this.allowOfflineSimulation = options.allowOfflineSimulation ?? false;
     this.loadToken();
   }

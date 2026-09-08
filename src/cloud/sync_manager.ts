@@ -25,7 +25,10 @@ export class SyncManager {
   private localConfigPath?: string;
 
   constructor(storageDir?: string, localConfigPath?: string) {
-    const dir = storageDir || join(homedir(), '.contextwise');
+    const dir =
+      storageDir ||
+      process.env.CONTEXTWISE_STORAGE_DIR ||
+      join(homedir(), '.contextwise');
     this.syncStatePath = join(dir, 'sync.json');
     this.localConfigPath = localConfigPath;
   }

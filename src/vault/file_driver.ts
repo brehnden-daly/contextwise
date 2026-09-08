@@ -19,6 +19,9 @@ export function getDefaultVaultFilePath(): string {
   if (process.env.CONTEXTWISE_VAULT_PATH) {
     return process.env.CONTEXTWISE_VAULT_PATH;
   }
+  if (process.env.CONTEXTWISE_STORAGE_DIR) {
+    return join(process.env.CONTEXTWISE_STORAGE_DIR, 'vault.enc.json');
+  }
   return join(homedir(), '.contextwise', 'vault.enc.json');
 }
 

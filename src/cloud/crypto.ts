@@ -71,7 +71,10 @@ export function openEnvelope(
  * Retrieves or generates the local device identity and asymmetric X25519 keypair.
  */
 export function getOrCreateDeviceIdentity(storageDir?: string): DeviceIdentity {
-  const dir = storageDir || join(homedir(), '.contextwise');
+  const dir =
+    storageDir ||
+    process.env.CONTEXTWISE_STORAGE_DIR ||
+    join(homedir(), '.contextwise');
   const filePath = join(dir, 'device.json');
 
   if (existsSync(filePath)) {
